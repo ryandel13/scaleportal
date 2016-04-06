@@ -1,0 +1,45 @@
+<div class="portletBackground">
+	</div>
+		
+	<div class="portletContent">
+		
+		<div class="portletHeader">
+			Patientoverview
+			<div id="selectFormPortletMenu">
+				<div class="selectFormPortletMenuItem" style="background:url(edit-file_generic_plain_center_16x16.png) no-repeat;">Load Template</div>
+			<div class="selectFormPortletMenuItem" style="background:url(upload_generic_plain_center_16x16.png) no-repeat;">Load CDA</div>
+			<div class="selectFormPortletMenuItem" onclick="getPatients();" style="background:url(synchronize_generic_plain_center_16x16.png) no-repeat;">Re-Sync</div>
+		</div>
+		</div>
+		<div class="portletInnerContent" id="formsSelectContent">
+			<div class="formsSelectRow" > Select Synchronize </div>
+		</div>
+</div>
+<script language="javascript" type="text/javascript">
+<!--
+function getPatients() {
+
+	$.ajax({
+		url: "http://localhost/RESTInterface/?action=getPatients",
+		context: document.body
+		}).done(function(data) {
+			addPatients(data);
+	});
+}
+
+function addPatients(data) {
+	obj = jQuery.parseJSON(data);
+
+	var content = "";
+	
+	for(var i = 0; i < obj.patientList.length; i++) {
+		template = obj.patientList[i];
+		//div = "<div class=\"formsSelectRow\" onclick=\"openForm('" + template.templateId + "');\">"  + template.templateName + "</div>";
+		div = "<div class=\"formsSelectRow\" onclick=\"ipcEvent('setPatientId','" + template.patientId + "');\">"  + template.patientName + "</div>";
+		content += div;
+	}
+	
+	$("#formsSelectContent").html(content);
+}
+-->
+</script>

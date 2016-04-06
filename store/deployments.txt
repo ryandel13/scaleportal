@@ -1,0 +1,1 @@
+{"pages":[{"pageName":"Forms","layout":"horizontal_30_70","fragments":["formsselect","formsfiller"]},{"pageName":"IHE","layout":"horizontal_33_33_33","fragments":["patientoverview","patientdetail","patientrecord"]},{"pageName":"TEST"}],"events":[{"eventName":"setTemplateId","listener":["formsfiller"]},{"eventName":"setPatientId","listener":["patientdetail","patientrecord"]}]}

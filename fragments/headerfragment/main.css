@@ -1,0 +1,14 @@
+#infoBox {
+    background:         #793D00;
+    color:              #eee;
+    font-weight:        bold;
+    font-size:          14px;
+    
+    position:           absolute;
+    bottom:                0px;
+    left:               10px;
+    padding:            10px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    height:             70px;
+}

@@ -1,0 +1,37 @@
+<div class="portletBackground">
+	</div>
+		
+	<div class="portletContent">
+		
+		<div class="portletHeader">
+			Patientdetail 
+			<div id="selectFormPortletMenu">
+				<div class="selectFormPortletMenuItem" style="background:url(edit-file_generic_plain_center_16x16.png) no-repeat;">Load Template</div>
+			<div class="selectFormPortletMenuItem" style="background:url(upload_generic_plain_center_16x16.png) no-repeat;">Load CDA</div>
+			<div class="selectFormPortletMenuItem" onclick="sync();" style="background:url(synchronize_generic_plain_center_16x16.png) no-repeat;">Re-Sync</div>
+		</div>
+		</div>
+		<div class="portletInnerContent" id="patientDetailContent">
+			<div class="formsSelectRow" > Select Synchronize </div>
+		</div>
+</div>
+<script language="javascript" type="text/javascript">
+<!--
+ 
+ function patientdetail_setPatientId(id) {
+		$.ajax({
+		url: "http://localhost/RESTInterface/?action=getPatient&patientId=" + id,
+		context: document.body
+		}).done(function(data) {
+			obj = jQuery.parseJSON(data);
+			var content = "";
+			
+			//div = "<div class=\"formsSelectRow\" onclick=\"openForm('" + template.templateId + "');\">"  + template.templateName + "</div>";
+			div = "<div><input type=\"text\" value=\"" + obj.GivenName + "\"><input type=\"text\" value=\"" + obj.LastName + "\"><input type=\"text\" value=\"" + obj.Gender + "\"></div>";
+			content += div;
+					
+			$("#patientDetailContent").html(content);
+	});
+ }
+ -->
+ </script>

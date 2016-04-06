@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xml:lang="de">
+<head>
+<title>
+	HTML5- REST POC
+</title>
+<link type="text/css" rel="stylesheet" href="main.css" />
+<link type="text/css" rel="stylesheet" href="layouts/tiles_100_v_30_70.css" />
+<!--%{LAYOUT_CSS}%-->
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript">
+<!--
+-->
+</script>
+</html>
+</head>
+
+<body>
+
+<img id="background" src="background3.jpg" />
+
+<div id="header">
+	HTML5 - REST
+	<p id="subtitle">Approving new technologies</p>
+</div>
+
+<div id="ControlPanel">
+    
+	<img src="chooser_generic_plain_center_16x16.png" style="position:absolute; left: 5px;" />
+	
+	<div class="cpMenuCaption">
+        Page
+        <div class="cpDropDown">
+            <div class="cpMenuItem" onclick="addPage();">Add</div>
+            <div class="cpMenuItem" onclick="">Rename</div>
+			<div class="cpMenuItem" onclick="deletePage();">Delete</div>
+        </div>
+    </div>
+	
+    <div class="cpMenuCaption">
+        Layout
+        <div class="cpDropDown">
+            <div class="cpMenuItem" onclick="deployLayout('horizontal_30_70', null)">30 / 70 Horizontal</div>
+            <div class="cpMenuItem" onclick="deployLayout('horizontal_33_33_33', null)">33 / 33 / 33 Horizontal</div>
+			<div class="cpMenuItem" onclick="deployLayout('horizontal_25_25_25_25', null)">25 / 25 / 25 / 25 Horizontal</div>
+			<div class="cpMenuItem" onclick="deployLayout('tiles_100_v_30_70', null)">100 / 30 / 70 Tiled</div>
+        </div>
+    </div>
+    
+	<img src="chooser_generic_plain_center_16x16.png" style="position:absolute; left: 5px;" />
+	
+    <div class="cpMenuCaption">
+        <span onclick="">Fragments</span>
+        <div class="cpDropDown" id="ddListFragments">
+			%{FRAGMENTS}%
+        </div>
+    </div>
+	
+	<div class="cpMenuCaption">
+		<span>Logout</span>
+	</div>
+</div>
+
+<div id="tabPanel">
+	%{PAGEMENU}%
+</div>
+
+
+<div id="contentContainer">
+	
+	
+	
+</div>
+
+<div id="footer">
+&copy; 2015 by Malte Christjan Koch
+</div>
+</body>

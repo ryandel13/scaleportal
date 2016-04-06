@@ -1,0 +1,30 @@
+	<div class="portletBackground">
+	</div>
+	
+	<div class="portletContent">
+		
+		<div class="portletHeader">
+			Web Content Display
+                    <div id="selectFormPortletMenu">
+			<div class="selectFormPortletMenuItem" style="background:url(edit-file_generic_plain_center_16x16.png) no-repeat;">Settings</div>
+                    </div>
+		</div>
+		<div class="portletInnerContent" id="webContentContent">
+			<div class="formsSelectRow" > Open Content </div>
+		</div>
+		
+	</div>
+	<script language="javascript">
+		function webcontent_openContent(param) {
+			openWebContent(param);
+		}
+		
+		function openWebContent(pageId) {
+			$.ajax({
+				url: "http://localhost/RESTInterface/?action=getWebContent&pageId=" + pageId,
+				context: document.body
+				}).done(function(data) {
+					$("#webContentContent").html(data);
+			});
+		}
+	</script>

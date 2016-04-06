@@ -1,0 +1,86 @@
+#mainContainer {
+    margin-left:        auto;
+    margin-right:       auto;
+    
+    position:           relative;
+    width:              900px;
+    top:                10px;
+    margin-bottom:		20px;
+    border-radius:      5px;
+    box-shadow:         7px 7px 20px 0px rgba(50, 50, 50, 0.75);
+    
+    min-height:         500px;
+    padding-bottom:     25px;
+	background:			#EEE;
+}
+
+
+#tiles_100_v_30_70_slot1 {
+	left:			0px;
+	width:			100%;
+	height:			215px;
+	/*position:		relative;*/
+	}
+	
+#tiles_100_v_30_70_slot2 {
+	margin-top:			215px;
+
+	position:		relative;
+	
+	width:              250px;
+min-height:			50px;
+    float:              left;
+    bottom:             0px;
+    clear:              both;
+	}
+	
+#tiles_100_v_30_70_slot3 {
+	margin-top:			215px;
+
+	position:		relative;
+	min-height:			50px;
+	margin-left:        250px;
+    padding-bottom:      20px;
+    padding-right:       10px;
+	}
+	
+#tiles_100_v_30_70_slot3 .portletContent {
+	position:	relative;
+}
+
+#headerfragmentContent {
+	background: url("../fragments/headerfragment/background.png");
+}
+
+h1, h2, h3 {
+    font-family: sans-serif,Arial,Verdana,"Trebuchet MS";
+    font-weight:        normal;
+}
+
+h1 {
+    font-size:          26px;
+    
+}
+
+h2 {
+    font-size:          19.5px;
+}
+
+h3 {
+    font-size:          15px;
+}
+
+p {
+    font-size:          13px;
+    margin-top:         13px;
+    margin-bottom:      13px;
+}
+
+#headerLine {
+    height:     5px;
+    position:   absolute;
+    margin-top: 215px;
+    width:      100%;
+    background: #793D00;
+	z-index:1000;
+}
